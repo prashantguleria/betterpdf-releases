@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Help and guides
+    url: https://betterpdf.co/help/
+    about: How to open, sign, fill, recognise and organise PDFs. For licences, purchases or anything private, email hello@evenpine.com.
+  - name: Report a security problem
+    url: https://github.com/prashantguleria/betterpdf-releases/blob/main/SECURITY.md
+    about: Please email security reports to hello@evenpine.com instead of opening an issue.

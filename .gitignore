@@ -1,0 +1,7 @@
+# DMGs and checksums live on GitHub Releases, never in the tree.
+*.dmg
+*.dmg.sha256
+*.zip
+# The Sparkle feed is served from https://betterpdf.co/appcast.xml, not from here.
+appcast.xml
+.DS_Store

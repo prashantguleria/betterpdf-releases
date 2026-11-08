@@ -1,0 +1,62 @@
+name: Bug report
+description: Something in Better PDF does not work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Please do not attach private documents or post anything you would not want public: issues here are visible to everyone. For a security problem, email hello@evenpine.com instead (see SECURITY.md).
+
+        **A diagnostics zip helps most.** In Better PDF choose **Help › Diagnostics…**, look through what it shows you, save the zip and drag it into the box below. It holds a summary, the app's own log from the last seven days, recent crash reports and the token driver status. Paths, email addresses, PINs and serials are removed, and no document names or contents are included.
+  - type: input
+    id: version
+    attributes:
+      label: Better PDF version
+      description: Better PDF › About Better PDF.
+      placeholder: "0.1.0 (1)"
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - Direct download (betterpdf.co or this page)
+        - Mac App Store
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac
+      placeholder: "macOS 26.1, MacBook Air M3"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what Better PDF did instead.
+      placeholder: |
+        1. Opened a form from…
+        2. Chose Fill & Sign and…
+        3. Expected… but…
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics zip
+      description: Drag the BetterPDF-Diagnostics-<date>.zip from Help › Diagnostics… here. If you would rather not post it publicly, say so and email it to hello@evenpine.com.
+  - type: textarea
+    id: signing
+    attributes:
+      label: Signing details (if this is about signing)
+      description: The kind of certificate (keychain, smart card or USB token), the token model and driver, and the viewer that shows the problem. Never post a PIN.
+  - type: checkboxes
+    id: latest
+    attributes:
+      label: Checks
+      options:
+        - label: I am on the latest release, or I have checked that it still happens there.
+          required: true

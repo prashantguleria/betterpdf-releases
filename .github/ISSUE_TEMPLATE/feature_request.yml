@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest something Better PDF should do.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Requests are read by the people who make Better PDF; please search the open issues first, and add a thumbs-up to one that already asks for the same thing.
+
+        If the request comes from something that went wrong, a **Help › Diagnostics…** zip helps: look through it, save it, and drag it into the box at the end. No document names or contents are included.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task, and where Better PDF gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: How you picture it working. Screenshots or sketches of other tools are welcome; please leave out private documents.
+  - type: input
+    id: version
+    attributes:
+      label: Better PDF version and edition
+      placeholder: "0.1.0, direct download"
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics zip (optional)
+      description: From Help › Diagnostics…, if the request is about something that went wrong.
