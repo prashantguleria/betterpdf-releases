@@ -7,7 +7,7 @@ update window and on [betterpdf.co/changelog](https://betterpdf.co/changelog/).
 
 This file is generated from the release notes of each version. Please do not edit it by hand.
 
-## [0.1.0] - 2026-11-06
+## [1.0.0] - 2026-11-06
 
 ### Added
 
@@ -17,4 +17,4 @@ This file is generated from the release notes of each version. Please do not edi
 - Help › Diagnostics… gathers the log, crash reports and token status into a zip you can send. Nothing leaves your Mac on its own.
 - Better PDF checks for updates once a day. Turn it off in Settings › General.
 
-[0.1.0]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v0.1.0
+[1.0.0]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.0
