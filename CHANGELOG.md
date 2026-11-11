@@ -7,6 +7,31 @@ update window and on [betterpdf.co/changelog](https://betterpdf.co/changelog/).
 
 This file is generated from the release notes of each version. Please do not edit it by hand.
 
+## [1.0.2] - 2026-11-11
+
+### Changed
+
+- Go › Back (⌘[) and Go › Forward (⌘]) return you to where you were before a jump: a link inside the document, a search result, a bookmark or an outline entry, a comment in the list, Go to Page, or the first and last page commands.
+- Find has two options at the right of the field: Match Case and Whole Words. Both are off to start with.
+- The menu for selected text now also has the system's Translate, the web search and Share.
+- A document reopens at the exact spot you left it, not at the top of that page, and with the page layout you last used for it (single page, continuous, two pages).
+- View › Fit Page (⌘8) zooms so the whole page fits in the window.
+- With Reduce Motion turned on in System Settings, panels, bars and palettes appear without sliding or fading.
+- Signing with a certificate: the save dialog now suggests the document's own name instead of "name signed.pdf". Saving with that name replaces the document after the usual Replace question, and the previous version is kept; type another name to save a separate signed copy.
+- A PDF that opens without a password but was restricted by its author no longer blocks you outright. The first time you print, copy or start editing, a card says the file is restricted by its author. Cancel leaves things as they are; Continue Anyway carries on and is remembered until you close the file. A file that needs a password to open still needs it.
+- File › Document Properties… › Security now shows the security method, the encryption level (for example 128-bit RC4), whether there is a password to open and a permissions password, and a line each for printing (high or low resolution), changing the document, commenting, filling form fields and signing, document assembly, content copying, copying for accessibility and page extraction.
+- File › Document Properties… has a Custom tab that lists the extra details some apps store in a PDF, such as a company name, as names and values you can select and copy.
+
+### Fixed
+
+- Saving with E-ink on no longer turns pages into pictures. With E-ink reading or the E-ink appearance on, a save (including the automatic save after an edit), Save As, an export, a conversion, extracted or split pages and a print all wrote each page as one grey image: the text could no longer be selected or searched, fonts and colour were gone, and highlights were drawn into the picture. Every one of these now writes the document as it was authored, in full colour, with its text, fonts and annotations. E-ink only changes what you see on screen.
+- A file that was saved this way cannot be repaired from itself, because the text and colour are no longer in it. Open it and choose File › Revert To › Browse All Versions… to go back to a version from before the save, or restore the file from Time Machine or another backup.
+- In the E-ink appearance, the name of the active tool in the mode bar (for example Highlight in Annotate) and the selected row in Tools are readable again. They were black on black.
+- The floating toolbar keeps its shape at the sides of the window. Dragging it to the left or right edge used to turn it into the narrow side bar, which has no labels and, in a short window, moves some tools into More Tools. It now rests against the edge as it is, whole and with its labels. To dock it to the side, keep pushing it past the edge until the side outline lights up, or use View › Mode Palette.
+- Edit mode: the card shown for a signed document now says the signature will show as changed after signing, the same words the signature panel uses after the save. It used to say invalid.
+- File › Document Properties… › Security showed "Password protected" and every permission as allowed for a file that opens without a password but restricts printing, copying or editing. It now says "Restricted by its author" and shows the permissions the file really has.
+- Saving a PDF no longer removes its custom properties, the extra details some apps store in a file, such as a company name or a document ID. A save, Save As, a saved copy, adding or removing a password and a searchable copy of a scan all keep them, with their values as they were.
+
 ## [1.0.1] - 2026-11-11
 
 ### Added
@@ -38,5 +63,6 @@ This file is generated from the release notes of each version. Please do not edi
 - Help › Diagnostics… gathers the log, crash reports and token status into a zip you can send. Nothing leaves your Mac on its own.
 - Better PDF checks for updates once a day. Turn it off in Settings › General.
 
+[1.0.2]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.2
 [1.0.1]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.1
 [1.0.0]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.0
