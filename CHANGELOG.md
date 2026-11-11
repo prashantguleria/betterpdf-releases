@@ -7,6 +7,13 @@ update window and on [betterpdf.co/changelog](https://betterpdf.co/changelog/).
 
 This file is generated from the release notes of each version. Please do not edit it by hand.
 
+## [1.0.3] - 2026-11-11
+
+### Fixed
+
+- Signing with a certificate from your keychain no longer stops at "The certificate is no longer available. Choose it again." for a certificate that is still there. Sign & Save now finds the certificate again when the keychain's saved reference to it does not lead back to it. If signing still fails, Help › Diagnostics… now records the reason.
+- Without a USB token driver installed, the app's log no longer fills with one "driver missing" line every second while Fill & Sign is open. A diagnostics report is smaller and easier to read.
+
 ## [1.0.2] - 2026-11-11
 
 ### Changed
@@ -63,6 +70,7 @@ This file is generated from the release notes of each version. Please do not edi
 - Help › Diagnostics… gathers the log, crash reports and token status into a zip you can send. Nothing leaves your Mac on its own.
 - Better PDF checks for updates once a day. Turn it off in Settings › General.
 
+[1.0.3]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.3
 [1.0.2]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.2
 [1.0.1]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.1
 [1.0.0]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.0
