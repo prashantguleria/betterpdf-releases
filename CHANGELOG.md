@@ -7,6 +7,24 @@ update window and on [betterpdf.co/changelog](https://betterpdf.co/changelog/).
 
 This file is generated from the release notes of each version. Please do not edit it by hand.
 
+## [1.0.4] - 2026-11-19
+
+### Changed
+
+- PDF to Word now rebuilds the document so it can be edited in Word or Pages: whole paragraphs with their alignment and spacing, headings, columns read in order, real tables (ruled or not, with merged cells), real bulleted and numbered lists, fonts, colours, bold, italic, underline, superscript, links, pictures at their size, footnotes, and repeating headers, footers and page numbers moved into the Word header and footer. Each page keeps its size, so landscape pages stay landscape.
+- PDF to Word keeps backgrounds behind the text. A full-page picture under the text, a watermark, a letterhead band or a page border no longer pushes the text around or gets mixed into it; the words stay as normal text in their own colour.
+- PDF to Word keeps designed pages together. A page laid out like a statement or a brochure, with pictures on one side and panels and tables on the other, keeps each block at its place in a text box, so the page count stays the same and nothing is stacked or shown twice. Panels with round corners and coloured bands are drawn behind their text, tables inside panels stay tables, small coloured labels become highlighted text, and small icons stay in their table cells. Text on a coloured panel stays on its panel even when Word uses a different font: lines keep the height they had in the PDF. The font is chosen by how wide the PDF set its words: the PDF's own font when Word has it, otherwise the common font that sets the same words closest to the same width, then a slightly smaller size, and letters are narrowed only for what is left. Letters are never stretched or spaced out. A numbered list in a panel starts where it did in the PDF and wraps inside the panel, table rows are never shorter than their text, and words in a small outlined button or a pill stay inside it. A row of pictures that is a little wider than the text is scaled to stay on one line, and each PDF page is fitted to one Word page.
+- PDF to Word writes the rupee sign where a PDF draws it with a special font that used to come out as the letter C.
+- Signing with a USB token, in the direct download: Better PDF now finds the drivers of more tokens, not only the Watchdata ProxKey. It knows where Feitian ePass2003 and HYP2003, SafeNet eToken, Thales IDPrime and OpenSC put their driver, it uses drivers your token software has already registered on this Mac, and it looks in the usual folders where token software installs a driver, so many other tokens work with no setup. That search covers a short list of system folders only, never your home folder, and you can turn it off with **Find Drivers Automatically** under **Manage**. If your token is still not found, open **Settings › Signing**, then **Manage** in the **Token drivers** row, and choose the driver file or add the folder that holds it. Messages about the token no longer name one brand, and **Help › Diagnostics…** lists the drivers that were found and which one is in use.
+- Signing: a certificate that reaches Better PDF both through a token driver and through the Keychain is now listed once.
+
+### Fixed
+
+- Scan: **Capture when steady** now takes the photo when you hold a page under your iPhone. It used to wait for the page to be perfectly still for a full second, which a hand never manages, so the pill stayed on "Page found · hold steady". A page that stays roughly in place for about a second is now captured, a page that is still moving is not, and each page is taken once: the pill reads "Captured · show the next page" until you swap the page or take it away.
+- Scan: the list of cameras now keeps itself up to date. Your iPhone's camera returns to the list after you stop the camera or the iPhone reconnects, without leaving Scan and coming back. If the iPhone is not listed, a line under the cameras says what to check.
+- Scan: **Scan Documents on iPhone…** now opens its menu under the row, with your iPhone's Take Photo and Scan Documents under Import from iPhone or iPad, and the menu stays open until you choose. It used to open a small menu in the top left corner of the window with only a greyed title. The same list is also in the menu bar, under **File › Import from iPhone or iPad**, while Scan is open.
+- Scan: if your iPhone was used as the camera before and is missing now (usually because Disconnect was tapped on it), **Reconnect iPhone camera…** under Cameras shows how to bring it back, with **Check Again**. While the iPhone is the camera, a line under the controls says to finish on the Mac: the camera is let go by itself when you save, press Esc, leave Scan, switch tabs, close the window or quit, so the iPhone goes back to its normal screen with nothing to press on it.
+
 ## [1.0.3] - 2026-11-11
 
 ### Fixed
@@ -70,6 +88,7 @@ This file is generated from the release notes of each version. Please do not edi
 - Help › Diagnostics… gathers the log, crash reports and token status into a zip you can send. Nothing leaves your Mac on its own.
 - Better PDF checks for updates once a day. Turn it off in Settings › General.
 
+[1.0.4]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.4
 [1.0.3]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.3
 [1.0.2]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.2
 [1.0.1]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.1
