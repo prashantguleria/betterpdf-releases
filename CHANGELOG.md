@@ -7,6 +7,51 @@ update window and on [betterpdf.co/changelog](https://betterpdf.co/changelog/).
 
 This file is generated from the release notes of each version. Please do not edit it by hand.
 
+## [1.1.0] - 2026-11-21
+
+### Added
+
+- **Page Size**: change pages to A3, A4, A5, Letter, Legal or Tabloid, to the size of another page in the file, or to a size of your own. Scale the content to fit, keep it at its size, or fill the page. Orientation can match each page. It opens in a bar over the page, which shows the new page over a dashed outline of the old size. If content would be cut off, the bar says so first and names the pages. Text stays text, and comments, links and form fields move with the page. One undo puts it back. Tools › Page Size… (⌥⌘L), the Pages palette or the right-click menu in Pages. Free.
+- **Crop Pages**: drag a frame or type the margins, or let Auto trim the empty margins (it leaves out dark scanner edges on scans). Crop odd and even pages with their own frames for book scans. A crop hides what is outside and can be undone. **Remove what is outside** (Pro) really deletes it and saves a new file, "‹name› cropped.pdf"; the original is not changed. Tools › Crop Pages… (⌥⌘K).
+- **Clean Up Scanned Pages**: tidy a PDF that is already scanned. Straighten tilted pages, fix pages photographed at an angle, crop to the paper and remove dark edges, remove shadows, turn pages upright, choose a look such as Greyscale or Black and white, and choose a size. The text is read again so the pages stay searchable. The fixes leave pages that are not scans exactly as they are; Greyscale and Black and white in Look change those pages too, and the button counts the pages that will change, such as "Make 6 pages greyscale". It opens in a bar over the page, where Split shows each page before and after; the fixes are checkboxes in a second row. Apply changes the file with one undo, or Save as a new file writes "‹name› cleaned.pdf". Free for 20 pages at a time; Black and white, Whiteboard, Receipt, the smaller sizes and longer runs are Pro. Tools › Clean Up Scanned Pages… (⌥⌘U).
+- **Make Greyscale**: turn any PDF grey, scanned or not, in the Clean Up bar set to Greyscale with every fix off. Text stays text and comments keep their colour. One undo puts the colour back, or Save as a new file keeps the original. Tools › Make Greyscale…, the Tools tab or the right-click menu in Pages. Free on any number of pages.
+- Dropping a PDF on Scan now offers to clean it up instead, so its digital pages are not turned into pictures.
+- **Remove Blank Pages**: finds the empty pages, such as the blank backs of a two-sided scan, with three sensitivity steps. A page with text, a comment or a form field is never offered, and at least one page always stays. One undo brings them back. Tools › Remove Blank Pages… (⌥⌘B). Free.
+- **Page Marks**: page numbers, headers and footers, and text watermarks in front of or behind the page, with {page}, {total}, {date} and {file} in the text. Numbering can start at any number and skip a cover. Bates numbers are Pro. It opens in a bar over the page, which shows each mark live in a dashed box before you apply. Marks print and show in every app; Undo removes them. Tools › Page Marks… (⌥⌘N).
+- **Compress** (Pro): save a smaller copy for Email (100 dpi), Standard (150 dpi) or Print (300 dpi), in a bar over the page instead of a separate window: it shows the size each choice gives and the page itself, original and compressed side by side (drag the line, or hold ⌥ to see the original), and Esc puts everything back as it was. Only pictures are made smaller; text, fonts and forms are not touched. It saves "‹name› compressed.pdf" and never changes the original. A password-protected file keeps its password. File › Compress… (⌥⌘J).
+- **Extract** and **Split** open in a bar in place of the palette, and the page grid previews the result instead of a separate window. Extract rings the pages it takes and labels them "new page 1" and so on; click pages or type "4, 7, 13" to choose them, save one file or a file for each page, and tick **Also delete them from this file** to move them out (one undo puts them back). Split cuts every N pages, after pages you click between, at each bookmark, or by file size, and shows each part with its name, pages, size and file name; this file stays as it is. Both are free.
+- **Customise Palettes**: choose which tools the Annotate, Fill & Sign, Pages and Scan palettes show, and drag them into your own order, in Settings › Palettes or by right-clicking a palette › Customise Palette…. Unticked tools move into the palette's More menu, and their shortcuts and menu items keep working; right-click a tool › Hide to move it there in one step. Reset to Default puts a palette back. Your choices apply to every window. Free.
+- **What's New**: after updating from 1.0, a card lists the new tools once, each with an **Open** button that opens it on the document in front of you (or asks for a PDF first). **Release Notes** opens the list of changes on betterpdf.co. Help › What's New in Better PDF shows it again any time. It does not show after a new install.
+- A small dot on a palette's **More** button says its menu holds a tool you have not used yet; it goes once you open the menu. Inside, each new tool has a **New** tag until you first use it, for 30 days at most.
+- The first time a PDF made of scanned pages opens in Pages, a note over the scanned pages button offers **Clean Up…**. It shows once on your Mac, never on a signed document.
+- **PDF to Excel**: save the tables in a PDF as an Excel workbook (.xlsx). Each table gets its own sheet, named Table 1, Table 2 and so on, and plain numbers are saved as numbers, so you can add them up. The bar shows the tables before you save. File › Export Tables as Excel…, or File › Export As…. Free.
+- Other apps, such as file managers, can open a PDF in Better PDF straight on a tool: Edit, Fill & Sign, Recognise Text, or PDF to Word, Excel or Markdown. The file opens, or comes to the front if it is already open, and the tool is ready.
+
+### Changed
+
+- Recognising text in scans (OCR) and Save Digital Copy are now free, with no licence or trial needed. That includes Recognise text in Convert and Export As, and Make all pages searchable in Clean Up, which no longer counts toward its 20 free pages.
+- **Convert in place**: PDF to Word, PDF to Text, PDF to Markdown and PDF to Images open in a bar over the page instead of a separate window, and the page shows the result before you save: the Word page with the fonts Word will use, the plain text, the Markdown source or rendered text, or the image at the type and scale you chose. Split shows the PDF page beside the result. A contact sheet shows the whole sheet, with 4, 5 or 6 columns under More. The save panel opens only when you press Save. File › Export As… opens the same bar, and File › Export Tables as CSV… saves the tables. The open PDF never changes.
+- **Images to PDF** opens your images as pages of a new Untitled document in the page grid, with a page size (or the image's own size), Auto, Portrait or Landscape, Fit or Fill, and margins. Drag pages to reorder them, add more with Add Images… or by dropping them, then Create PDF and save it with ⌘S. Nothing is written until you save.
+- Menus show icons: every Better PDF item in the menu bar and in the right-click menus has its own small symbol, the same one the toolbar, palette or tool uses, and they stay visible on macOS 27. Clean Up Scanned Pages now uses a wand, so it no longer looks like Scan.
+- The Tools menu is grouped into Modes, Tools and Page Tools. Shortcuts show in the right-hand column instead of inside the names, and each item has a short tip. Single-key shortcuts still type normally in text fields.
+- Changing pages in a signed document now asks first. **Change a Copy** opens "‹name› copy.pdf" in a new tab and keeps the signed original as it is; **Change This File** goes ahead, and the signatures are no longer valid after you save. In the App Store edition, if the copy cannot be saved beside the original, you are asked where to save it.
+- The Tools tab has cards for the new page tools, Clean Up and Compress. The Grayscale card is now Make Greyscale, which changes the pages in place instead of saving a grey copy.
+- Crop opens in a bar in place of the palette instead of a popover: margins, Keep margins equal, Auto, Apply to, Odd and Even, and Remove what is outside are all in the bar, the page arrows sit under the page, and holding ⌥ shows the page uncropped.
+- Switching to Scan is quicker the first time: the camera list is read in the background, so the window no longer pauses while the cameras are found.
+- Take Snapshot copies the pages you see again. It had been copying a blank white picture, because the pages are drawn in a layer the capture could not see; it now draws the visible pages, notes and markup included, at your screen's sharpness.
+- A tool's bar can no longer be dragged out of the window: its grip stops at every edge, and making the window smaller brings the bar back inside.
+
+### Fixed
+
+- The tool bars (Compress, Clean Up, Page Size, Page Marks, Crop, Extract and Split) now follow your theme in light, dark and E-ink: choices, pop-up menus and checkboxes use the theme's own colours, and only the main button uses the accent colour.
+- Nothing in the app is drawn in the system blue any more. Focus rings, highlighted menu items, checkboxes and selected rows use your theme's colours or a neutral grey, including in Settings, Palettes and the sheets.
+- The tool bars always fit the window. In a narrow window, options that do not fit move into a More menu, and Cancel and the main button always stay visible. Page Marks with Watermark chosen no longer runs past the edge of the window.
+- **Image watermarks** in Page Marks: choose Text or Image under Watermark, then drop a logo or stamp on the bar or the page, or choose one. PNG, JPEG, HEIC, PDF (first page) and SVG work, transparent parts stay clear, and PDF and SVG stay sharp. Set the opacity, size as a share of the page width, angle, one of nine positions, and in front or behind. The last five pictures are kept under Recent. Text watermarks get an opacity slider beside the number. Free, like text watermarks.
+- Crop: dragging a corner or edge of the frame now follows the pointer exactly. A corner could jump the wrong way.
+- Typing a page range in a tool bar no longer stops after the first character when the main button's title changes.
+- Pages: clicking a page thumbnail now selects it at once. It used to wait for the double-click delay.
+- Translations: each tool now has one name per language in the palette, the menus, the tool bar, Edit › Undo and the help pages (for example Crop in German and Japanese, Page Size in Italian and Hindi, Split in Hindi, Remove Blank Pages in French and Chinese). Chinese now says 调板 for palette, as macOS does.
+
 ## [1.0.4] - 2026-11-19
 
 ### Changed
@@ -88,6 +133,7 @@ This file is generated from the release notes of each version. Please do not edi
 - Help › Diagnostics… gathers the log, crash reports and token status into a zip you can send. Nothing leaves your Mac on its own.
 - Better PDF checks for updates once a day. Turn it off in Settings › General.
 
+[1.1.0]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.1.0
 [1.0.4]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.4
 [1.0.3]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.3
 [1.0.2]: https://github.com/prashantguleria/betterpdf-releases/releases/tag/v1.0.2
